@@ -9,7 +9,7 @@
         
     cur = TestCases['.CheckCommasTest'] = new Array();
     
-        cur['_jacoco.agentFile'] = 'C:\\Users\\vinay\\AppData\\Local\\Temp\\jacocoagent11191772531491430137.jar';
+        cur['_jacoco.agentFile'] = 'C:\\Users\\vinay\\AppData\\Local\\Temp\\jacocoagent9203243328367086309.jar';
     
         cur['ant.core.lib'] = 'C:\\Program Files (x86)\\Apache\\apache-ant-1.10.11\\lib\\ant.jar';
     
@@ -127,7 +127,7 @@
     
         cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
     
-        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\\Users\\vinay\\IdeaProjects\\comma.git\\report\\junit\\TEST-CheckCommasTest.xml crashfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junitvmwatcher7319604703785992069.properties propsfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junit4343027923139097659.properties';
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\\Users\\vinay\\IdeaProjects\\comma.git\\report\\junit\\TEST-CheckCommasTest.xml crashfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junitvmwatcher5513450837830893032.properties propsfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junit9557547373597573604.properties';
     
         cur['sun.java.launcher'] = 'SUN_STANDARD';
     
@@ -198,7 +198,7 @@
                 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
             </tr>
             <tr valign="top" class="Error">
-                <td><a title="Display all tests" href="0_CheckCommasTest.html">CheckCommasTest</a></td><td><a title="Display all tests" href="0_CheckCommasTest.html">8</a></td><td><a title="Display only errors" href="0_CheckCommasTest-errors.html">1</a></td><td>0</td><td>0</td><td>0.257</td><td>2021-11-04T22:38:27</td><td>vini-dell-7567</td>
+                <td><a title="Display all tests" href="0_CheckCommasTest.html">CheckCommasTest</a></td><td><a title="Display all tests" href="0_CheckCommasTest.html">4</a></td><td><a title="Display only errors" href="0_CheckCommasTest-errors.html">1</a></td><td>0</td><td>0</td><td>0.312</td><td>2021-11-04T23:57:14</td><td>vini-dell-7567</td>
             </tr>
         </table>
         <h2>Errors</h2>
@@ -207,20 +207,22 @@
                 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
             </tr>
             <tr valign="top" class="Error">
-                <td><a name="testWords"></a>testWords</td><td>Error</td><td>remove
+                <td><a name="testWordSet"></a>testWordSet</td><td>Error</td><td>The input string is null
                     <br>
                     <br>
-                    <code>java.lang.UnsupportedOperationException: remove
+                    <code>java.lang.NullPointerException: The input string is null
                         <br>
-                        	at java.base/java.util.Iterator.remove(Iterator.java:102)
+                        	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
                         <br>
-                        	at java.base/java.util.AbstractCollection.removeAll(AbstractCollection.java:369)
+                        	at CheckCommas.validateInput(CheckCommas.java:37)
                         <br>
                         	at CheckCommas.words(CheckCommas.java:48)
                         <br>
-                        	at CheckCommas.words(CheckCommas.java:53)
+                        	at CheckCommas.words(CheckCommas.java:57)
                         <br>
-                        	at CheckCommasTest.testWords(CheckCommasTest.java:72)
+                        	at CheckCommas.wordSet(CheckCommas.java:76)
+                        <br>
+                        	at CheckCommasTest.testWordSet(CheckCommasTest.java:77)
                         <br>
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
                         <br>
@@ -274,7 +276,7 @@
                         <br>
                         	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
                         <br>
-                    </code></td><td>0.012</td>
+                    </code></td><td>0.011</td>
             </tr>
         </table>
         <div class="Properties">

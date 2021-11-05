@@ -44,11 +44,12 @@ public class CheckCommas {
 		return inputString;
 	}
 
-	List<String> words(String inputString) {
+	private List<String> words(String inputString) {
 		validateInput(inputString);
 		Objects.requireNonNull(inputString);
 		List<String> result = Arrays.asList(inputString.split(" "));
 		// result.removeAll(Arrays.asList("", null));
+		this.words = result;
 		return result;
 	}
 
@@ -57,12 +58,26 @@ public class CheckCommas {
 	}
 
 
-	Set<String> wordSet(List<String> words) {
+	private Set<String> wordSet(List<String> words) {
 		Objects.requireNonNull(words);
-		for (String word : words)
-			for (char c : word.toCharArray())
-				if ((int) c < 97) word = word.replace(String.valueOf(c), "");
-		return new HashSet<>(words);
+		Set<String> result = new HashSet<>();
+		for (String word : words) {
+			String fixed = "";
+			for (char c : word.toCharArray()) {
+				if ((int) c > 96) {
+					fixed += c;
+				}
+			}
+			if (fixed.length() > 0) {
+				result.add(fixed);
+			}
+		}
+		this.wordsAsSet = result;
+		return result;
+	}
+
+	Set<String> wordSet() {
+		return wordSet(words());
 	}
 
 //	private Set<String> commasBefore() {

@@ -2,9 +2,7 @@ import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
@@ -17,46 +15,33 @@ import static org.junit.Assert.*;
  */
 public class CheckCommasTest {
 
-	private CheckCommas cc = new CheckCommas();
+	private final CheckCommas cc = new CheckCommas();
+	private long startTime;
 
 	@Before
-	public void before() throws Exception {
+	public void before() {
 		System.out.println("Starting test");
+		this.startTime = System.currentTimeMillis();
 	}
 
 	@After
-	public void after() throws Exception {
-		System.out.println("Test complete");
+	public void after() {
+		long elapsed = System.currentTimeMillis() - startTime;
+		System.out.println("Test complete. Elapsed time: " + elapsed);
 	}
 
 	/**
 	 * Method: validateInput(String inputString)
 	 */
 	@Test
-	public void testValidateInput1() throws Exception {
+	public void testValidateInput() {
 //		Checks if exception is thrown if null
 		assertThrows(NullPointerException.class, () -> cc.validateInput(null));
-	}
-
-	@Test
-	public void testValidateInput2() throws Exception {
 		//		Checks if exception is thrown if null
 		assertEquals(cc.validateInput(""), "");
-	}
-
-	@Test
-	public void testValidateInput3() throws Exception {
-//		Checks if exception is thrown if numbers are present in String
+		//		Checks if exception is thrown if numbers are present in String
 		assertThrows(IllegalArgumentException.class, () -> cc.validateInput("all 0"));
-	}
-
-	@Test
-	public void testValidateInput4() throws Exception {
 		assertThrows(IllegalArgumentException.class, () -> cc.validateInput("all 9"));
-	}
-
-	@Test
-	public void testValidateInput5() throws Exception {
 		assertEquals(cc.validateInput("all hello me here zebra \n aha"), "all hello me here zebra \n aha");
 	}
 
@@ -64,13 +49,11 @@ public class CheckCommasTest {
 	 * Method: words(String inputString)
 	 */
 	@Test
-	public void testWords() throws Exception {
+	public void testWords() {
 		cc.setInputString("This is, what\n it should be like. is this what it should be like?");
 		String[] arr = {"this", "is,", "what.", "it", "should", "be", "like.", "is", "this", "what", "it", "should", "be", "like?"};
 		List<String> list = new ArrayList<>();
 		Collections.addAll(list, arr);
-		System.out.println(cc.words());
-		System.out.println(list);
 		assertEquals(cc.words(), list);
 	}
 
@@ -78,7 +61,7 @@ public class CheckCommasTest {
 	 * Method: inputString()
 	 */
 	@Test
-	public void testInputString() throws Exception {
+	public void testInputString() {
 		cc.setInputString("hello there");
 		assertEquals(cc.inputString(), "hello there");
 	}
@@ -87,18 +70,12 @@ public class CheckCommasTest {
 	 * Method: wordSet(List<String> words)
 	 */
 	@Test
-	public void testWordSet() throws Exception {
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = CheckCommas.getClass().getMethod("wordSet", List<String>.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/
+	public void testWordSet() {
+		String[] arr = {"this", "is", "what", "it", "should", "be", "like"};
+		Set<String> set = new HashSet<>();
+		Collections.addAll(set, arr);
+		CheckCommas cc2 = new CheckCommas("This is, what\n it should be like. is this what it should be like ?");
+		assertEquals(cc2.wordSet(), set);
 	}
 
 } 

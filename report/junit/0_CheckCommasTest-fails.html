@@ -9,7 +9,7 @@
         
     cur = TestCases['.CheckCommasTest'] = new Array();
     
-        cur['_jacoco.agentFile'] = 'C:\\Users\\vinay\\AppData\\Local\\Temp\\jacocoagent13271780277869534450.jar';
+        cur['_jacoco.agentFile'] = 'C:\\Users\\vinay\\AppData\\Local\\Temp\\jacocoagent1005559801693158549.jar';
     
         cur['ant.core.lib'] = 'C:\\Program Files (x86)\\Apache\\apache-ant-1.10.11\\lib\\ant.jar';
     
@@ -127,7 +127,7 @@
     
         cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
     
-        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\\Users\\vinay\\IdeaProjects\\comma.git\\report\\junit\\TEST-CheckCommasTest.xml crashfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junitvmwatcher14788443226175838668.properties propsfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junit9567775430973070765.properties';
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\\Users\\vinay\\IdeaProjects\\comma.git\\report\\junit\\TEST-CheckCommasTest.xml crashfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junitvmwatcher6663544502319542640.properties propsfile=C:\\Users\\vinay\\IdeaProjects\\comma.git\\junit3901351546946791838.properties';
     
         cur['sun.java.launcher'] = 'SUN_STANDARD';
     
@@ -198,7 +198,7 @@
                 <th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
             </tr>
             <tr valign="top" class="Failure">
-                <td><a title="Display all tests" href="0_CheckCommasTest.html">CheckCommasTest</a></td><td><a title="Display all tests" href="0_CheckCommasTest.html">8</a></td><td>0</td><td><a title="Display only failures" href="0_CheckCommasTest-fails.html">2</a></td><td>0</td><td>0.253</td><td>2021-11-04T22:42:10</td><td>vini-dell-7567</td>
+                <td><a title="Display all tests" href="0_CheckCommasTest.html">CheckCommasTest</a></td><td><a title="Display all tests" href="0_CheckCommasTest.html">4</a></td><td>0</td><td><a title="Display only failures" href="0_CheckCommasTest-fails.html">1</a></td><td>0</td><td>0.298</td><td>2021-11-05T00:23:07</td><td>vini-dell-7567</td>
             </tr>
         </table>
         <h2>Failures</h2>
@@ -207,10 +207,10 @@
                 <th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
             </tr>
             <tr valign="top" class="Failure">
-                <td><a name="testWords"></a>testWords</td><td>Failure</td><td>expected:&lt;[, t, h, i, s, , i, s, ,, , w, h, a, t, ., , i, t, , s, h, o, u, l, d, , b, e, , l, i, k, e, ., , i, s, , t, h, i, s, , w, h, a, t, , i, t, , s, h, o, u, l, d, , b, e, , l, i, k, e, ?]&gt; but was:&lt;[this, is,, what., it, should, be, like., is, this, what, it, should, be, like?]&gt;
+                <td><a name="testWordSet"></a>testWordSet</td><td>Failure</td><td>expected:&lt;[be, is, is,, it, like, like., like?, should, this, what, what.]&gt; but was:&lt;[be, is, it, like, should, this, what]&gt;
                     <br>
                     <br>
-                    <code>junit.framework.AssertionFailedError: expected:&lt;[, t, h, i, s, , i, s, ,, , w, h, a, t, ., , i, t, , s, h, o, u, l, d, , b, e, , l, i, k, e, ., , i, s, , t, h, i, s, , w, h, a, t, , i, t, , s, h, o, u, l, d, , b, e, , l, i, k, e, ?]&gt; but was:&lt;[this, is,, what., it, should, be, like., is, this, what, it, should, be, like?]&gt;
+                    <code>junit.framework.AssertionFailedError: expected:&lt;[be, is, is,, it, like, like., like?, should, this, what, what.]&gt; but was:&lt;[be, is, it, like, should, this, what]&gt;
                         <br>
                         	at org.junit.Assert.fail(Assert.java:89)
                         <br>
@@ -220,7 +220,7 @@
                         <br>
                         	at org.junit.Assert.assertEquals(Assert.java:146)
                         <br>
-                        	at CheckCommasTest.testWords(CheckCommasTest.java:74)
+                        	at CheckCommasTest.testWordSet(CheckCommasTest.java:78)
                         <br>
                         	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
                         <br>
@@ -274,73 +274,7 @@
                         <br>
                         	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
                         <br>
-                    </code></td><td>0.020</td>
-            </tr>
-            <tr valign="top" class="Failure">
-                <td><a name="testInputString"></a>testInputString</td><td>Failure</td><td>expected:&lt;[ h e l l o  t h e r e ]&gt; but was:&lt;[hello there]&gt;
-                    <br>
-                    <br>
-                    <code>junit.framework.AssertionFailedError: expected:&lt;[ h e l l o  t h e r e ]&gt; but was:&lt;[hello there]&gt;
-                        <br>
-                        	at org.junit.Assert.assertEquals(Assert.java:117)
-                        <br>
-                        	at org.junit.Assert.assertEquals(Assert.java:146)
-                        <br>
-                        	at CheckCommasTest.testInputString(CheckCommasTest.java:83)
-                        <br>
-                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-                        <br>
-                        	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-                        <br>
-                        	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-                        <br>
-                        	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-                        <br>
-                        	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-                        <br>
-                        	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-                        <br>
-                        	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-                        <br>
-                        	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-                        <br>
-                        	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-                        <br>
-                        	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-                        <br>
-                        	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-                        <br>
-                        	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-                        <br>
-                        	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-                        <br>
-                        	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-                        <br>
-                        	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-                        <br>
-                        	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-                        <br>
-                        	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-                        <br>
-                        	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-                        <br>
-                        	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-                        <br>
-                        	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-                        <br>
-                        	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-                        <br>
-                        	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-                        <br>
-                        	at junit.framework.JUnit4TestAdapter.run(JUnit4TestAdapter.java:50)
-                        <br>
-                        	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.run(JUnitTestRunner.java:535)
-                        <br>
-                        	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.launch(JUnitTestRunner.java:1197)
-                        <br>
-                        	at org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner.main(JUnitTestRunner.java:1042)
-                        <br>
-                    </code></td><td>0.005</td>
+                    </code></td><td>0.028</td>
             </tr>
         </table>
         <div class="Properties">
