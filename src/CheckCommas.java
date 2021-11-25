@@ -6,6 +6,8 @@ public class CheckCommas {
 	private Set<String> wordsAsSet;
 	private Set<String> commaBefore;
 	private Set<String> commaAfter;
+	private Set<String> commaBoth;
+	private Set<String> commaNone;
 
 
 	public CheckCommas(String inputString) {
@@ -62,12 +64,7 @@ public class CheckCommas {
 		Objects.requireNonNull(words);
 		Set<String> result = new HashSet<>();
 		for (String word : words) {
-			String fixed = "";
-			for (char c : word.toCharArray()) {
-				if ((int) c > 96) {
-					fixed += c;
-				}
-			}
+			String fixed = removePunctuation(word);
 			if (fixed.length() > 0) {
 				result.add(fixed);
 			}
@@ -80,66 +77,77 @@ public class CheckCommas {
 		return wordSet(words());
 	}
 
-//	private Set<String> commasBefore() {
-//		Set<String> result = new HashSet<>();
-//		String[] test = inputString.split(",");
-//		for (String str : test) {
-//			int i = 0;
-//			int j = 1;
-//			while (true) {
-//				try {
-//					int asc = (int) str.charAt(j);
-//					if (asc > 97) {
-//						break;
-//					}
-//				} catch (IndexOutOfBoundsException e) {
-//					j--;
-//					break;
-//				}
-//				j++;
-//			}
-//			result.add(str.substring(i, ++j));
-//		}
-//		return result;
-//	}
-//
-//	private Set<String> commasAfter() {
-//		Set<String> result = new HashSet<>();
-//		String[] test = inputString.split(",");
-//		for (String str : test) {
-//			int i = str.length() - 1;
-//			int j = i - 1;
-//			while (true) {
-//				try {
-//					int asc = (int) str.charAt(j);
-//					if (asc > 97) {
-//						break;
-//					}
-//				} catch (IndexOutOfBoundsException e) {
-//					j++;
-//					break;
-//				}
-//				j--;
-//			}
-//			result.add(str.substring(j, ++i));
-//		}
-//		return result;
-//	}
-//
-//	public boolean isSentence() {
-//		int i = 0;
-//		int j = 1;
-//		while (j < inputString.length()) {
-//			try {
-//				int asc =
-//				if (inputString.charAt(j))
-//			}
-//			catch(IndexOutOfBoundsException e){
-//
-//			}
-//			j++;
-//		}
-//	}
+	private String removePunctuation(String word) {
+		Objects.requireNonNull(word);
+		StringBuilder fixed = new StringBuilder();
+		for (char c : word.toCharArray()) {
+			if ((int) c > 96) {
+				fixed.append(c);
+			}
+		}
+		return fixed.toString();
+	}
+
+	private String whereComma(int position, List<String> words) {
+		Objects.requireNonNull(words);
+		try {
+			String cur = words.get(position);
+			if (cur.charAt(cur.length() - 1) == ',') {
+				return "after";
+			}
+			try {
+				String prev = words.get(position - 1);
+				if (prev.charAt(prev.length() - 1) == ',' && (int) cur.charAt(cur.length() - 1) > 96) {
+					return "before";
+				}
+			} catch (IndexOutOfBoundsException e) {
+				return "none";
+			}
+		} catch (IndexOutOfBoundsException e) {
+			return "none";
+		}
+		return "none";
+	}
+
+	private List<Set<String>> commas(List<String> words) {
+		Objects.requireNonNull(words);
+		commaBefore = new HashSet<>();
+		commaAfter = new HashSet<>();
+		for (int i = 0; i < words.size(); i++) {
+			String where = whereComma(i, words);
+			switch (where) {
+				case "after":
+					commaAfter.add(words.get(i));
+				case "before":
+					commaBefore.add(words.get(i));
+				case "none":
+					commaNone.add(words.get(i));
+			}
+		}
+		commaBoth = new HashSet<>(commaAfter);
+		commaBoth.retainAll(commaBefore);
+		commaBefore.removeAll(commaBoth);
+		commaAfter.removeAll(commaBoth);
+		List<Set<String>> result = new ArrayList<>();
+		result.add(commaAfter);
+		result.add(commaBefore);
+		result.add(commaBoth);
+		result.add(commaNone);
+		return result;
+	}
 
 
+	List<Set<String>> commas() {
+		return commas(words());
+	}
+
+//	boolean isSentence() {
+//		if (Objects.isNull(commaAfter) || Objects.isNull(commaBefore)) {
+//			commas();
+//		}
+//		for (String word : commaBefore){
+//
+//		}
+//	}
+//
 }
