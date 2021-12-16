@@ -1,134 +1,46 @@
 import org.junit.Test;
-import org.junit.Before; 
-import org.junit.After; 
+import org.junit.Before;
+import org.junit.After;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
-/** 
-* Comma Tester. 
-* 
-* @author Vinayak Mathur
-* @since Dec 16, 2021
-* @version 1.0 
-*/ 
-public class CommaTest { 
+/**
+ * Comma Tester.
+ *
+ * @author Vinayak Mathur
+ * @version 1.0
+ * @since Dec 16, 2021
+ */
+public class CommaTest {
+	/**
+	 * Method: validate()
+	 */
+	@Test
+	public void testValidate() throws Exception {
+		Comma cc1 = new Comma("all hello me here zebra \n aha");
+		// Should throw NullPointerException if argument is null.
+		assertThrows(NullPointerException.class, () -> new Comma(null));
 
-@Before
-public void before() throws Exception { 
-} 
+		assertEquals(cc1, cc1.validate());
 
-@After
-public void after() throws Exception { 
-} 
+		assertThrows(IllegalArgumentException.class, new Comma("all 0")::validate);
+		assertThrows(IllegalArgumentException.class, new Comma("all 9")::validate);
 
-/** 
-* 
-* Method: validate() 
-* 
-*/ 
-@Test
-public void testValidate() throws Exception { 
-//TODO: Test goes here... 
-} 
+		assertEquals(cc1, cc1.validate());
+	}
 
-/** 
-* 
-* Method: isPunctuation(Character c) 
-* 
-*/ 
-@Test
-public void testIsPunctuation() throws Exception { 
-//TODO: Test goes here... 
-} 
-
-/** 
-* 
-* Method: removePunctuation(String word) 
-* 
-*/ 
-@Test
-public void testRemovePunctuation() throws Exception { 
-//TODO: Test goes here... 
-} 
-
-/** 
-* 
-* Method: commas() 
-* 
-*/ 
-@Test
-public void testCommas() throws Exception { 
-//TODO: Test goes here... 
-} 
-
-/** 
-* 
-* Method: isSentence() 
-* 
-*/ 
-@Test
-public void testIsSentence() throws Exception { 
-//TODO: Test goes here... 
-} 
-
-
-/** 
-* 
-* Method: checkBeforeAfter(String cur, String prev) 
-* 
-*/ 
-@Test
-public void testCheckBeforeAfter() throws Exception { 
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = Comma.getClass().getMethod("checkBeforeAfter", String.class, String.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/ 
-} 
-
-/** 
-* 
-* Method: checkAfter(String cur) 
-* 
-*/ 
-@Test
-public void testCheckAfter() throws Exception { 
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = Comma.getClass().getMethod("checkAfter", String.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/ 
-} 
-
-/** 
-* 
-* Method: checkBefore(String cur, String prev) 
-* 
-*/ 
-@Test
-public void testCheckBefore() throws Exception { 
-//TODO: Test goes here... 
-/* 
-try { 
-   Method method = Comma.getClass().getMethod("checkBefore", String.class, String.class); 
-   method.setAccessible(true); 
-   method.invoke(<Object>, <Parameters>); 
-} catch(NoSuchMethodException e) { 
-} catch(IllegalAccessException e) { 
-} catch(InvocationTargetException e) { 
-} 
-*/ 
-} 
-
+	/**
+	 * Method: isSentence()
+	 */
+	@Test
+	public void testIsSentence() throws Exception {
+		Comma c1 = new Comma("This is, what. it, should be like. is this what it should be like?");
+		assertFalse(c1.isSentence());
+		Comma c2 = new Comma("Please, sit spot. Sit spot, sit. spot, here now, here.");
+		assertTrue(c2.validate().isSentence());
+	}
 } 
