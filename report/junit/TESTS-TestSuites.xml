@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="vini-dell-7567" id="0" name="CheckCommasTest" package="" skipped="0" tests="4" time="0.434" timestamp="2021-11-06T19:16:19">
+  <testsuite errors="0" failures="0" hostname="vini-dell-7567" id="0" name="CheckCommasTest" package="" skipped="0" tests="4" time="0.174" timestamp="2021-12-16T13:47:36">
       <properties>
-          <property name="ant.library.dir" value="C:\Program Files (x86)\Apache\apache-ant-1.10.11\lib" />
+          <property name="ant.library.dir" value="C:/Program Files (x86)/Apache/apache-ant-1.10.11/lib" />
 
           <property name="ant.file.type" value="file" />
 
@@ -38,7 +38,7 @@
 
           <property name="output.dir" value="output" />
 
-          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\vinay\IdeaProjects\comma.git\report\junit\TEST-CheckCommasTest.xml crashfile=C:\Users\vinay\IdeaProjects\comma.git\junitvmwatcher14569783510011506305.properties propsfile=C:\Users\vinay\IdeaProjects\comma.git\junit5173343211139665922.properties" />
+          <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner CheckCommasTest skipNonTests=false filtertrace=false haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\vinay\IdeaProjects\comma.git\report\junit\TEST-CheckCommasTest.xml crashfile=C:\Users\vinay\IdeaProjects\comma.git\junitvmwatcher15725814909157338576.properties propsfile=C:\Users\vinay\IdeaProjects\comma.git\junit13516734148971385058.properties" />
 
           <property name="jdk.debug" value="release" />
 
@@ -52,7 +52,7 @@
 
           <property name="java.specification.vendor" value="Oracle Corporation" />
 
-          <property name="_jacoco.agentFile" value="C:\Users\vinay\AppData\Local\Temp\jacocoagent17466499195898264060.jar" />
+          <property name="_jacoco.agentFile" value="C:\Users\vinay\AppData\Local\Temp\jacocoagent3314188180688290636.jar" />
 
           <property name="java.version.date" value="2021-04-20" />
 
@@ -124,7 +124,7 @@
 
           <property name="output.file" value="output/output.txt" />
 
-          <property name="ant.home" value="C:\Program Files (x86)\Apache\apache-ant-1.10.11" />
+          <property name="ant.home" value="C:/Program Files (x86)/Apache/apache-ant-1.10.11" />
 
           <property name="sun.os.patch.level" value="" />
 
@@ -132,7 +132,7 @@
 
           <property name="ant.version" value="Apache Ant(TM) version 1.10.11 compiled on July 10 2021" />
 
-          <property name="java.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Crucial\Crucial Storage Executive;C:\Program Files (x86)\Common Files\Acronis\VirtualFile\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.5.1;C:\Program Files\PuTTY\;C:\Program Files (x86)\Calibre2\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Program Files (x86)\Apache\apache-ant-1.10.11\bin;C:\Users\vinay\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\vinay\AppData\Local\Programs\Python\Python38-32\;C:\Users\vinay\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\vinay\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vinay\AppData\Local\atom\bin;C:\Users\vinay\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\bin;;C:\Users\vinay\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;;C:\Users\vinay\AppData\Roaming\npm;C:\Program Files (x86)\Nmap;C:\Users\vinay\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2021.2.2\bin;;C:\Users\vinay\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.2\bin;;C:\Program Files\JetBrains\PyCharm 2021.2.2\bin;;." />
+          <property name="java.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vinay\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Crucial\Crucial Storage Executive;C:\Program Files (x86)\Common Files\Acronis\VirtualFile;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64;C:\Program Files (x86)\Common Files\Acronis\SnapAPI;C:\Program Files (x86)\AOMEI\AOMEI Backupper\6.5.1;C:\Program Files\PuTTY;C:\Program Files (x86)\Calibre2;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Git\cmd;C:\Program Files (x86)\Apache\apache-ant-1.10.11\bin;C:\Users\vinay\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\vinay\AppData\Local\Programs\Python\Python38-32;C:\Users\vinay\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Users\vinay\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\vinay\AppData\Local\atom\bin;C:\Users\vinay\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.1\bin;C:\Users\vinay\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\bin;C:\Users\vinay\AppData\Roaming\npm;C:\Program Files (x86)\Nmap;C:\Users\vinay\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\CLion 2021.2.2\bin;C:\Users\vinay\AppData\Local\Programs\MiKTeX\miktex\bin\x64;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.2\bin;C:\Program Files\JetBrains\PyCharm 2021.2.2\bin;." />
 
           <property name="java.vendor" value="Oracle Corporation" />
 
@@ -150,22 +150,22 @@
 
       </properties>
 
-      <testcase classname="CheckCommasTest" name="testWords" time="0.037" />
+      <testcase classname="CheckCommasTest" name="testWords" time="0.015" />
 
-      <testcase classname="CheckCommasTest" name="testInputString" time="0.002" />
+      <testcase classname="CheckCommasTest" name="testInputString" time="0.001" />
 
-      <testcase classname="CheckCommasTest" name="testValidateInput" time="0.006" />
+      <testcase classname="CheckCommasTest" name="testValidateInput" time="0.002" />
 
-      <testcase classname="CheckCommasTest" name="testWordSet" time="0.002" />
+      <testcase classname="CheckCommasTest" name="testWordSet" time="0.001" />
 
       <system-out><![CDATA[Starting test
-Test complete. Elapsed time: 3
+Test complete. Elapsed time: 1
 Starting test
 Test complete. Elapsed time: 1
 Starting test
-Test complete. Elapsed time: 6
+Test complete. Elapsed time: 2
 Starting test
-Test complete. Elapsed time: 1
+Test complete. Elapsed time: 0
 ]]></system-out>
 
       <system-err><![CDATA[]]></system-err>

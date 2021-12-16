@@ -1,10 +1,9 @@
 import org.junit.Test;
-import org.junit.Before;
-import org.junit.After;
 
 import java.util.*;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 /**
  * CheckCommas Tester.
@@ -18,17 +17,6 @@ public class CheckCommasTest {
 	private final CheckCommas cc = new CheckCommas();
 	private long startTime;
 
-	@Before
-	public void before() {
-		System.out.println("Starting test");
-		this.startTime = System.currentTimeMillis();
-	}
-
-	@After
-	public void after() {
-		long elapsed = System.currentTimeMillis() - startTime;
-		System.out.println("Test complete. Elapsed time: " + elapsed);
-	}
 
 	/**
 	 * Method: validateInput(String inputString)
